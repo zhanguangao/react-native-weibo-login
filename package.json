@@ -1,0 +1,29 @@
+
+{
+  "name": "react-native-weibo-login",
+  "version": "1.0.1",
+  "description": "新浪微博登录模块",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhanguangao/react-native-weibo-login.git"
+  },
+  "keywords": [
+    "react-native",
+    "ios",
+    "android",
+    "weibo",   
+    "sina",
+    "login"
+  ],
+  "author": "zhanguangao",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zhanguangao/react-native-weibo-login/issues"
+  },
+  "homepage": "https://github.com/zhanguangao/react-native-weibo-login#readme"
+
+}
