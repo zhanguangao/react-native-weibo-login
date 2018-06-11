@@ -1,9 +1,14 @@
 
 # react-native-weibo-login
+React Native App接入微博登陆，不需要分享，在github找到了[react-native-weibo](https://github.com/reactnativecn/react-native-weibo)，可惜该库已经一年没有更新，使用的不是最新的微博SDK（ android SDK版本：4.1，ios SDK版本3.2.1 ），不能很好的兼容最新的RN（ 0.55.4 ）版本，所以自己动手写了这个库，实现了微博登陆，没实现分享功能。
 
 ## Getting started
 
 `$ npm install react-native-weibo-login --save`
+
+or
+
+`yarn add react-native-weibo-login`
 
 ### Mostly automatic installation
 
@@ -63,7 +68,7 @@ sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
 2. Append the following lines to `android/settings.gradle`:
   	```
   	include ':react-native-weibo-login'
-  	project(':react-native-weibo-login').projectDir = new File(rootProject.projectDir, 	'../node_modules/react-native-weibo-login/android')
+  	project(':react-native-weibo-login').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-weibo-login/android')
   	```
 3. Insert the following lines inside the dependencies block in `android/app/build.gradle`:
   	```
@@ -85,12 +90,20 @@ sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
 	```
 }
 
+## Config
+ - appKey: 你在微博开放平台上申请的应用ID
+ - scope：OAuth2.0 授权机制中 authorize 接口的一个参数。通过 Scope，平台将开放更多的微博
+核心功能给开发者，同时也加强用户隐私保护，提升了用户体验，用户在新 OAuth2.0 授权页中有权利
+ 选择赋予应用的功能。
+目前 Scope 支持传入多个 Scope 权限，用逗号分隔。
+关于 Scope 概念及注意事项，请查看：`http://open.weibo.com/wiki/Scope`
+ - redirectURI：默认 `https://api.weibo.com/oauth2/default.html`，必须和sina微博开放平台中应用高级设置中的redirectURI设置的一致，不然会登录失败
+
 
 ## Usage
 ```javascript
 import * as WeiBo from 'react-native-weibo-login';
 
- // 设置登录参数 
 let config = {
     appKey:"2317411734",
     scope: 'all',       
@@ -102,6 +115,6 @@ WeiBo.login(config)
         console.log('login success:',res)
     }).catch(err=>{ 
         console.log('login fail:',err)
-})
+    })
 ```
   
