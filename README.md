@@ -114,7 +114,7 @@ let config = {
 WeiBo.login(config)
     .then(res=>{  
         console.log('login success:',res)
-        // 登陆成功后打印出的数据如下：
+        //登陆成功后打印出的数据如下：
         // { 
         //     refreshToken: '2.00Gc2PbDcecpWC127d0bc690FE7TzD',
         //     type: 'WBAuthorizeResponse',
