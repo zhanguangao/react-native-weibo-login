@@ -100,6 +100,7 @@ sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
  - redirectURI：默认 `https://api.weibo.com/oauth2/default.html`，必须和sina微博开放平台中应用高级设置中的redirectURI设置的一致，不然会登录失败
 
 
+
 ## Usage
 ```javascript
 import * as WeiBo from 'react-native-weibo-login';
@@ -113,6 +114,15 @@ let config = {
 WeiBo.login(config)
     .then(res=>{  
         console.log('login success:',res)
+        // 登陆成功后打印出的数据如下：
+        // { 
+        //     refreshToken: '2.00Gc2PbDcecpWC127d0bc690FE7TzD',
+        //     type: 'WBAuthorizeResponse',
+        //     expirationDate: 1686362993740.243,
+        //     userID: '3298780934',
+        //     errCode: 0,
+        //     accessToken: '2.00Gc2PbDcecpWCa981899f410o5hEX' 
+        // }
     }).catch(err=>{ 
         console.log('login fail:',err)
     })
