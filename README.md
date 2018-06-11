@@ -88,15 +88,10 @@ sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
         }
 	}
 	```
-}
 
 ## Config
  - appKey: 你在微博开放平台上申请的应用ID
- - scope：OAuth2.0 授权机制中 authorize 接口的一个参数。通过 Scope，平台将开放更多的微博
-核心功能给开发者，同时也加强用户隐私保护，提升了用户体验，用户在新 OAuth2.0 授权页中有权利
- 选择赋予应用的功能。
-目前 Scope 支持传入多个 Scope 权限，用逗号分隔。
-关于 Scope 概念及注意事项，请查看：`http://open.weibo.com/wiki/Scope`
+ - scope：OAuth2.0 授权机制中 authorize 接口的一个参数。通过 Scope，平台将开放更多的微博核心功能给开发者，同时也加强用户隐私保护，提升了用户体验，用户在新 OAuth2.0 授权页中有权利选择赋予应用的功能。目前 Scope 支持传入多个 Scope 权限，用逗号分隔。赋值为`all`代表请求所有scope权限。关于 Scope 概念及注意事项，请查看：`http://open.weibo.com/wiki/Scope`
  - redirectURI：默认 `https://api.weibo.com/oauth2/default.html`，必须和sina微博开放平台中应用高级设置中的redirectURI设置的一致，不然会登录失败
 
 
