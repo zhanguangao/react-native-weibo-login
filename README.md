@@ -19,8 +19,8 @@ or
 
 #### iOS
 
-1. Add `node_modules/react-native-weibo-login/ios/WeiboSDK.bundle` in you project, or else it will be crash.
-
+1. Add `node_modules/react-native-weibo-login/ios/WeiboSDK.bundle` in you project, or else it will be crash.  
+![add_weibosdk_bundle](https://github.com/zhanguangao/react-native-weibo-login/blob/master/Example/src/add_weibosdk_bundle.png?raw=true)
 2. In XCode, in the project navigator, right click `Libraries` ➜ `Add Files to [your project's name]`, Go to `node_modules` ➜ `react-native-weibo-login` and add `RCTWeiBo.xcodeproj`.
 3. In XCode, in the project navigator, select your project.
     
