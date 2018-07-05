@@ -1,7 +1,7 @@
 
 {
   "name": "react-native-weibo-login",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "新浪微博登录模块",
   "main": "index.js",
   "scripts": {
@@ -13,10 +13,8 @@
   },
   "keywords": [
     "react-native",
-    "ios",
-    "android",
-    "weibo",   
     "sina",
+    "weibo",      
     "login"
   ],
   "author": "zhanguangao",
