@@ -4,11 +4,7 @@ React Native App接入微博登陆，不需要分享，在github找到了[react-
 
 ## Getting started
 
-`$ npm install react-native-weibo-login --save`
-
-or
-
-`yarn add react-native-weibo-login`
+`yarn add GoyouTech/react-native-weibo-login`
 
 ### Mostly automatic installation
 
