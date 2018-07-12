@@ -23,7 +23,7 @@ Pod::Spec.new do |s|
   s.homepage     = "https://github.com/GoyouTech/react-native-weibo-login"
   s.license      = "MIT"
   
-	s.author             = { "GoyouTech" => "developer@goyouapp.com" }
+  s.author             = { "GoyouTech" => "developer@goyouapp.com" }
   s.platform     = :ios, "8.0"
   s.source       = { :git => "https://github.com/GoyouTech/react-native-weibo.git", :tag => "master" }
   s.source_files  = "**/*.{h,m}"
