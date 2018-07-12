@@ -1,5 +1,0 @@
-rootProject.name = 'WeiboLoginDemo'
-include ':react-native-weibo-login'
-project(':react-native-weibo-login').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-weibo-login/android')
-
-include ':app'
