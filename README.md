@@ -19,47 +19,36 @@ or
 
 #### iOS
 
-1. Add `node_modules/react-native-weibo-login/ios/WeiboSDK.bundle` in you project, or else it will be crash.  
-![add_weibosdk_bundle](https://github.com/zhanguangao/react-native-weibo-login/blob/master/Example/src/add_weibosdk_bundle.png?raw=true)
-2. In XCode, in the project navigator, right click `Libraries` ➜ `Add Files to [your project's name]`, Go to `node_modules` ➜ `react-native-weibo-login` and add `RCTWeiBo.xcodeproj`.
-3. In XCode, in the project navigator, select your project.
-    
-    Add
-    - libRCTWeiBo.a
-    - QuartzCore.framework
-    - ImageIO.framework
-    - SystemConfiguration.framework
-    - Security.framework
-    - CoreTelephony.framework
-    - CoreText.framework
-    - UIKit.framework
-    - Foundation.framework
-    - CoreGraphics.framework 
-    - Photos.framework
-    - libz.tbd
-    - libsqlite3.tbd
-    
-    to your project's `Build Phases` ➜ `Link Binary With Libraries`.
-4.  In the project navigator, in `Targets` ➜ `info` ➜ `URL types`. Add new URL type, `Identifier` value is `com.weibo`, `URL Schemes` value is `wb` + `you weibo appKey`, such as: `wb2317411734`.
-5. Right click `Info.plist` open as source code, insert the following lines:
-    ```xml
-    <key>LSApplicationQueriesSchemes</key>
-    <array>
-        <string>sinaweibohd</string>
-        <string>weibosdk</string>
-        <string>sinaweibo</string>
-        <string>weibosdk2.5</string>
-    </array>
-    ```
-6.  Copy the following in `AppDelegate.m`:
-```
-- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url
-sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
-{
-  return [RCTLinkingManager application:application openURL:url
-                            sourceApplication:sourceApplication annotation:annotation];
-}
-```
+1. 修改 ios/Podfile, 添加依赖包: RCTWeibo
+
+  ```
+    pod 'RCTWeibo', :path => '../node_modules/react-native-weibo-login/ios'
+  ```
+
+2.  In the project navigator, in `Targets` ➜ `info` ➜ `URL types`. Add new URL type, `Identifier` value is `com.weibo`, `URL Schemes` value is `wb` + `you weibo appKey`, such as: `wb2317411734`.
+
+3. Right click `Info.plist` open as source code, insert the following lines:
+
+  ```xml
+  <key>LSApplicationQueriesSchemes</key>
+  <array>
+      <string>sinaweibohd</string>
+      <string>weibosdk</string>
+      <string>sinaweibo</string>
+      <string>weibosdk2.5</string>
+  </array>
+  ```
+
+4.  Copy the following in `AppDelegate.m`:
+
+  ```
+  - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
+  {
+    return [RCTLinkingManager application:application openURL:url
+                              sourceApplication:sourceApplication annotation:annotation];
+  }
+  ```
 
 #### Android
 
