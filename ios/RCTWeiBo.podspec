@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name         = "RCTWeibo"
+  s.name         = "RCTWeiBo"
   s.version      = "0.0.1"
   s.summary      = "React-Native(iOS/Android) functionalities include Weibo Login"
 
